@@ -18,7 +18,7 @@ class NotesController < ApplicationController
         @note = Note.find_by(id:params[:id])
         @note.update(note_value: params[:note_value].to_s)
         @note.save
-        render: json: @note
+        render json: @note
     end 
 
     def destroy
