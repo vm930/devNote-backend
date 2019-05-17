@@ -13,4 +13,9 @@ class UsersController < ApplicationController
         @user = Note.find_by(id: params[:id])
         render json: @user
     end 
+
+    private
+    def user_params
+        params.require(:user).permit(:user_name,:full_name,:bio,:email,:avatar_url)
+    end 
 end
