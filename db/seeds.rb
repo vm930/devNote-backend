@@ -1,13 +1,8 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 
-
-# User id: nil, user_name: nil, password_digest: nil, full_name: nil, bio: nil, email: nil, avatar_url: nil, created_at: nil, updated_at: nil
+#  NoteCode.destroy_all
+#  Code.destroy_all
+#  Note.destroy_all
+#  User.destroy_all
 
 
 victoria = User.create(user_name:"victoriamei", full_name:"Victoria Mei", bio:"forever learner", email: "victoriamei@gmail.com")
@@ -60,22 +55,22 @@ puts "made codes"
 
 # NoteCode id: nil, code_id: nil, note_id: nil, created_at: nil, updated_at: nil
 
-note_code1 = NoteCode.create(code_id:code1, note_id:note13.id)
-note_code2 = NoteCode.create(code_id:code1, note_id:note13.id)
-note_code3 = NoteCode.create(code_id:code3, note_id:note12.id)
-note_code4 = NoteCode.create(code_id:code3, note_id:note12.id)
-note_code5 = NoteCode.create(code_id:code3, note_id:note12.id)
-note_code6 = NoteCode.create(code_id:code2, note_id:note2.id)
-note_code7 = NoteCode.create(code_id:code4, note_id:note10.id)
-note_code8 = NoteCode.create(code_id:code4, note_id:note11.id)
-note_code9 = NoteCode.create(code_id:code5, note_id:note9.id)
-note_code10 = NoteCode.create(code_id:code6, note_id:note8.id)
-note_code11 = NoteCode.create(code_id:code9, note_id:note7.id)
-note_code12 = NoteCode.create(code_id:code7, note_id:note6.id)
-note_code13 = NoteCode.create(code_id:code7, note_id:note5.id)
-note_code14 = NoteCode.create(code_id:code7, note_id:note4.id)
-note_code15 = NoteCode.create(code_id:code8, note_id:note3.id)
-note_code16 = NoteCode.create(code_id:code9, note_id:note1.id)
+note_code1 = NoteCode.create(code_id:code1.id, note_id:note13.id)
+note_code2 = NoteCode.create(code_id:code1.id, note_id:note13.id)
+note_code3 = NoteCode.create(code_id:code3.id, note_id:note12.id)
+note_code4 = NoteCode.create(code_id:code3.id, note_id:note12.id)
+note_code5 = NoteCode.create(code_id:code3.id, note_id:note12.id)
+note_code6 = NoteCode.create(code_id:code2.id, note_id:note2.id)
+note_code7 = NoteCode.create(code_id:code4.id, note_id:note10.id)
+note_code8 = NoteCode.create(code_id:code4.id, note_id:note11.id)
+note_code9 = NoteCode.create(code_id:code5.id, note_id:note9.id)
+note_code10 = NoteCode.create(code_id:code6.id, note_id:note8.id)
+note_code11 = NoteCode.create(code_id:code9.id, note_id:note7.id)
+note_code12 = NoteCode.create(code_id:code7.id, note_id:note6.id)
+note_code13 = NoteCode.create(code_id:code7.id, note_id:note5.id)
+note_code14 = NoteCode.create(code_id:code7.id, note_id:note4.id)
+note_code15 = NoteCode.create(code_id:code8.id, note_id:note3.id)
+note_code16 = NoteCode.create(code_id:code9.id, note_id:note1.id)
 
 puts "made note-codes"
 
