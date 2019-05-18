@@ -15,9 +15,8 @@ class NotesController < ApplicationController
     end 
 
     def update
-        
-        @note = Note.find_by(id:params[:id])
-        @note.update(note_value: params[:note_value])
+        @note = Note.find_by(id: params[:id])
+        @note.update(note_value: params[:note][:note_value])
         @note.save
         render json: @note
     end 
