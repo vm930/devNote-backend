@@ -5,7 +5,7 @@ class NotesController < ApplicationController
     end 
 
     def create
-        @note = Note.create(note_params)
+        @note = Note.find_or_create_by(note_params)
         render json: @note
     end 
 
@@ -15,8 +15,9 @@ class NotesController < ApplicationController
     end 
 
     def update
+        
         @note = Note.find_by(id:params[:id])
-        @note.update(note_value: params[:note_value].to_s)
+        @note.update(note_value: params[:note_value])
         @note.save
         render json: @note
     end 
