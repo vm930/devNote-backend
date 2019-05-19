@@ -14,17 +14,23 @@ class UsersController < ApplicationController
         render json: @user
     end 
 
-    def update
+    # def update
 
-        @user = User.find_by(id:params[:id])
-        @user.update(user_params)
-        @user.save
-        render: json: @user
-    end 
+    #     @user = User.find_by(id:params[:id])
+    #     @user.update(user_params)
+    #     @user.save
+    #     render: json: @user
+    # end 
 
     def destroy
         @user = User.find_by(id:params[:id])
-        @note.destroy
+        @user.destroy
+    end 
+
+    def login 
+        @user =  User.find_by(user_params)
+      
+        render json: @user
     end 
 
     private
