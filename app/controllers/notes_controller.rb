@@ -16,7 +16,7 @@ class NotesController < ApplicationController
 
     def update
         @note = Note.find_by(id: params[:id])
-        @note.update(note_value: params[:note][:note_value])
+        @note.update(note_params)
         @note.save
         render json: @note
     end 
@@ -28,6 +28,6 @@ class NotesController < ApplicationController
 
     private
     def note_params
-        params.require(:note).permit(:user_id,:note_value)
+        params.require(:note).permit(:user_id,:note_value,:title)
     end 
 end
