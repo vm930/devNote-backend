@@ -3,9 +3,8 @@ class UserSerializer < ActiveModel::Serializer
   attributes :id, :user_name, :full_name, :email, :avatar_url, :bio
   has_many :notes
   
-
-  # def note_title
-  #   object.note.note_title
+  # def note_id
+  #   object.note.id
   # end 
 
   # def note_value
