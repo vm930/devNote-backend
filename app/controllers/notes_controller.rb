@@ -5,13 +5,11 @@ class NotesController < ApplicationController
     end 
 
     def create
-        # byebug
         if Note.find_by(note_params)
-            puts "hi"
+            puts "note already exist"
         else
             @note = Note.create(note_params)
         # @note = Note.find_or_create_by(note_params)
-
         render json: @note
         end
         
