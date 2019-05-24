@@ -5,8 +5,14 @@ class NotesController < ApplicationController
     end 
 
     def create
-        @note = Note.find_or_create_by(note_params)
+        if Note.find_by(note_params)
+            puts "note already exist"
+        else
+            @note = Note.create(note_params)
+        # @note = Note.find_or_create_by(note_params)
         render json: @note
+        end
+        
     end 
 
     def show

@@ -64,13 +64,15 @@ note_code6 = NoteCode.create(code_id:code2.id, note_id:note2.id)
 note_code7 = NoteCode.create(code_id:code4.id, note_id:note10.id)
 note_code8 = NoteCode.create(code_id:code4.id, note_id:note11.id)
 note_code9 = NoteCode.create(code_id:code5.id, note_id:note9.id)
-note_code10 = NoteCode.create(code_id:code6.id, note_id:note8.id)
-note_code11 = NoteCode.create(code_id:code9.id, note_id:note7.id)
-note_code12 = NoteCode.create(code_id:code7.id, note_id:note6.id)
-note_code13 = NoteCode.create(code_id:code7.id, note_id:note5.id)
-note_code14 = NoteCode.create(code_id:code7.id, note_id:note4.id)
-note_code15 = NoteCode.create(code_id:code8.id, note_id:note3.id)
-note_code16 = NoteCode.create(code_id:code9.id, note_id:note1.id)
+
+
+note_code10 = NoteCode.create(code_id:11, note_id:154)
+note_code11 = NoteCode.create(code_id:12, note_id:154)
+note_code12 = NoteCode.create(code_id:13, note_id:154)
+note_code13 = NoteCode.create(code_id:14, note_id:156)
+note_code14 = NoteCode.create(code_id:15, note_id:130)
+note_code15 = NoteCode.create(code_id:16, note_id:132)
+note_code16 = NoteCode.create(code_id:17, note_id:132)
 
 puts "made note-codes"
 
