@@ -10,6 +10,7 @@ class CodesController < ApplicationController
         else
             @code = Code.create(code_params)
         # @note = Note.find_or_create_by(note_params)
+        #    byebug
         render json: @code
         end
         
