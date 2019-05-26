@@ -21,12 +21,13 @@ class CodesController < ApplicationController
         render json: @code
     end 
 
-    # def update
-    #     @note = Note.find_by(id: params[:id])
-    #     @note.update(note_params)
-    #     @note.save
-    #     render json: @note
-    # end 
+    def update
+        # byebug
+        @code = Code.find_by(id: params[:id])
+        @code.update(code_params)
+        @code.save
+        render json: @code
+    end 
 
     # def destroy
     #     @note = Note.find_by(id:params[:id])
