@@ -29,10 +29,11 @@ class CodesController < ApplicationController
         render json: @code
     end 
 
-    # def destroy
-    #     @note = Note.find_by(id:params[:id])
-    #     @note.destroy
-    # end 
+    def destroy
+        code = Code.find_by(id:params[:id])
+        code.destroy
+        render json: code
+    end 
 
     private
     def code_params
