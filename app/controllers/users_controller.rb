@@ -5,8 +5,15 @@ class UsersController < ApplicationController
     end 
 
     def create
-        @user = User.find_or_create_by(user_params)
-        render json: @user
+        @user = User.new(user_params)
+        if @user && @user.valid?
+            @user.save
+            token = encode_token({ user_id: @user.id })
+            render json: { user: @user, jwt: token }
+        else
+            # render errors
+            render json: { errors: @user.errors.full_messages }
+        end
     end 
 
     def show
@@ -35,6 +42,6 @@ class UsersController < ApplicationController
 
     private
     def user_params
-        params.require(:user).permit(:user_name,:full_name,:bio,:email,:avatar_url)
+        params.permit(:user_name,:full_name,:bio,:email,:avatar_url,:password,:password_confirmation)
     end 
 end

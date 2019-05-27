@@ -5,13 +5,8 @@ class NoteCodesController < ApplicationController
     end 
 
     def create
-        # if NoteCode.find_by(note_codes_params)
-        #     puts "code snippet or note already exist"
-        # else
-        # byebug
             @note_code = NoteCode.create(note_codes_params)
         render json: @note_code
-        # end
         
     end 
 
