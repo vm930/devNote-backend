@@ -1,24 +1,5 @@
-# README devNote backend 
+# devNote backend 🎨Taking Notes and Code Snippets Anytime Anywhere You want.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is backend repo for devNote, Click on Front-end repo to learn more! 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+https://github.com/vm930/devNote-frontend
